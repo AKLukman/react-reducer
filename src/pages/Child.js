@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { COUNTER_CONTEXT } from "../App";
 import "./Child.css";
 
-export default function Child({ count, setCount }) {
+export default function Child() {
+  const { count, setCount } = useContext(COUNTER_CONTEXT);
   return (
     <div>
       <div className="main">
