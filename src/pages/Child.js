@@ -7,9 +7,9 @@ export default function Child() {
   const reducer = (state, action) => {
     console.log(action);
     if (action.type === "INCREMENT") {
-      return state + 1;
+      return state + action.payload.count;
     } else if (action.type === "DECREMENT") {
-      return state - 1;
+      return state - action.payload.count;
     }
   };
 
@@ -22,13 +22,17 @@ export default function Child() {
         <div>
           <button
             className="btn1"
-            onClick={() => dispatch({ type: "INCREMENT" })}
+            onClick={() =>
+              dispatch({ type: "INCREMENT", payload: { count: 5 } })
+            }
           >
             Increasing
           </button>
           <button
             className="btn2"
-            onClick={() => dispatch({ type: "DECREMENT" })}
+            onClick={() =>
+              dispatch({ type: "DECREMENT", payload: { count: 5 } })
+            }
           >
             Decreasing
           </button>
