@@ -1,0 +1,21 @@
+.main {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.btn1 {
+  margin-right: 10px;
+  background-color: brown;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+.btn2 {
+  background-color: greenyellow;
+  border: 1px solid white;
+  padding: 10px;
+  color: black;
+  border-radius: 5px;
+}
