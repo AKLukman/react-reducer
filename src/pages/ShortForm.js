@@ -1,39 +1,7 @@
 import React, { useReducer, useState } from "react";
+import { initialState, reducer } from "../state/formReducer";
 
 function ShortForm() {
-  const initialState = {
-    firstName: "",
-    lastName: "",
-    userName: "",
-    city: "",
-    state: "",
-    zip: "",
-    checkBox: false,
-  };
-
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case "INPUT":
-        return {
-          ...state,
-          [action.payload.name]: action.payload.value,
-        };
-      case "TOGGLE":
-        return {
-          ...state,
-          checkBox: !state.checkBox,
-        };
-      default:
-        return state;
-    }
-
-    // if (action.type === "INPUT") {
-    //   return {
-    //     ...state,
-    //     [action.payload.name]: action.payload.value,
-    //   };
-    // }
-  };
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const submit = (event) => {

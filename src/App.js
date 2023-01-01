@@ -16,8 +16,8 @@ function App() {
   return (
     <div>
       <COUNTER_CONTEXT.Provider value={value}>
-        <Parent></Parent>
-        {/* <ShortForm></ShortForm> */}
+        {/* <Parent></Parent> */}
+        <ShortForm></ShortForm>
       </COUNTER_CONTEXT.Provider>
     </div>
   );
