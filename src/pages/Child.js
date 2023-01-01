@@ -9,7 +9,12 @@ export default function Child() {
     if (action.type === "INCREMENT") {
       return state + action.payload.count;
     } else if (action.type === "DECREMENT") {
-      return state - action.payload.count;
+      const stateValue = state - action.payload.count;
+      if (0 <= stateValue) {
+        return stateValue;
+      } else {
+        return 0;
+      }
     }
   };
 
